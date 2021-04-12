@@ -1,0 +1,577 @@
+/* * {
+  box-sizing: border-box;
+} */
+body {
+  font-family: sans-serif;
+  position: relative;
+  padding: 0;
+  margin: 0;
+}
+
+/* side bar hidden */
+.sidebar {
+  display: none;
+}
+input {
+  display: none;
+}
+label {
+  display: none;
+}
+
+/* First Div */
+.navbar {
+  height: 50px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  padding: 10px;
+  margin: 0;
+  justify-content: center;
+  align-items: center;
+}
+.navbar div {
+  justify-content: center;
+  align-items: center;
+}
+.navbar div h1 {
+  padding: 10px;
+  margin: 0;
+}
+
+.navlist {
+  display: flex;
+  justify-content: space-around;
+  padding: 10px;
+  margin: 0;
+}
+.navlist li {
+  display: flex;
+  text-decoration: none;
+}
+.navlist li a {
+  display: flex;
+  text-decoration: none;
+  color: #000000;
+  font-family: sans-serif;
+  font-weight: 700;
+  font-size: larger;
+}
+.navlist li a:hover {
+  border-bottom: 2px solid navy;
+}
+
+/* Second Div */
+section {
+  position: sticky;
+}
+.home {
+  position: relative;
+}
+.slideshow-img {
+  position: absolute;
+  object-fit: cover;
+  border: 2px solid navy;
+  /* z-index: -1; */
+  /* display: none; */
+  opacity: 0;
+  transition: opacity 0.75s ease-in-out;
+}
+
+/* .slideshow-img:first-child {
+  display: block;
+} */
+/* Third Div */
+
+.aboutus {
+  display: flex;
+  position: relative;
+  top: 600px;
+  width: 100%;
+  color: #000;
+}
+
+blockquote {
+  font-family: sans-serif;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+  padding-top: 70px;
+}
+
+/* Fourth Div */
+
+.services {
+  font-family: sans-serif;
+  width: 100%;
+  position: relative;
+  top: 600px;
+  /* height: 300px; */
+  height: 100vh;
+  padding-top: 5rem;
+  color: #000;
+}
+
+.services h2,
+.services p {
+  padding-left: 3rem;
+  text-align: center;
+}
+
+.servicelist {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  text-decoration: none;
+  padding-top: 10px;
+  padding-left: 3rem;
+}
+
+.servicelist li {
+  display: flex;
+  border: #fff;
+  width: 40vw;
+  margin: 1rem;
+  box-shadow: 1px 1px 1px 1px #dcdcdc;
+  font-family: sans-serif;
+  position: relative;
+  text-decoration: none;
+  padding: 20px;
+  border-radius: 2px;
+}
+
+/* fifth Div */
+
+.contactus {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  background-color: rgb(50, 50, 68);
+  position: relative;
+  top: 600px;
+  color: white;
+  width: 100%;
+}
+
+.logo img {
+  width: 250px;
+  height: 200px;
+  margin: 20px;
+  border: 1px solid rgb(31, 31, 167);
+  border-radius: 2em;
+}
+
+.address {
+  display: flex;
+  flex-direction: column;
+  padding-top: 20px;
+}
+
+.address h3 {
+  font-family: sans-serif;
+}
+.address ul {
+  padding: 0;
+}
+.address ul h4 {
+  font-family: sans-serif;
+  margin-bottom: 10px;
+  padding: 0;
+  margin: 0;
+  margin-bottom: 10px;
+  left: 0;
+}
+.address ul li {
+  display: flex;
+  position: relative;
+  margin-bottom: 10px;
+  font-family: sans-serif;
+  font-size: 13px;
+  text-decoration: none;
+}
+.signup {
+  font-family: sans-serif;
+  padding-top: 20px;
+}
+
+.subcribe {
+  margin-left: 0;
+  padding-left: 10px;
+  padding-right: 10px;
+  background-color: none;
+  color: white;
+  border: 2px solid rgb(13, 94, 24);
+  border-radius: 1em;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+/* Sixth Div */
+
+footer {
+  display: flex;
+  justify-content: center;
+  position: relative;
+  width: 100%;
+  top: 600px;
+  align-items: center;
+  background-color: black;
+  color: rgb(163, 162, 162);
+  height: 30px;
+}
+footer p {
+  margin: 0;
+}
+
+/* Projects */
+
+.projects__items {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+.projects__item {
+  border-bottom: 2px solid navy;
+  padding: 10px;
+  margin: 10px;
+}
+
+.projectsContent {
+  color: #fff;
+  padding: 10px;
+  margin-left: 20px;
+}
+
+@media only screen and (max-width: 768px) {
+  body {
+    font-family: sans-serif;
+    background: rgb(50, 50, 68);
+    height: 100vh;
+    padding: 0;
+    margin: 0;
+  }
+
+  /* side bar hidden */
+  label {
+    display: block;
+  }
+  input {
+    display: block;
+  }
+  .navbar {
+    display: flex;
+    color: whitesmoke;
+  }
+  .navlist {
+    display: none;
+  }
+
+  .sidebar {
+    display: block;
+    position: fixed;
+    left: -200px;
+    width: 200px;
+    margin: 0;
+    height: 100vh;
+    background: linear-gradient(0deg, #1b1b1b, #222, #1b1b1b);
+    transition: all 0.5s ease;
+    z-index: 1000;
+  }
+
+  .sidebar header {
+    display: block;
+    font-size: 30px;
+    color: rgb(31, 31, 167);
+    text-align: center;
+    line-height: 35px;
+    background: linear-gradient(0deg, #1b1b1b, #222, #1b1b1b);
+    user-select: none;
+  }
+  .sidebar .navlist {
+    display: block;
+    margin: 0;
+    padding: 0;
+  }
+  .sidebar .navlist a {
+    display: block;
+    list-style: none;
+    text-decoration: none;
+    width: 100%;
+    line-height: 30px;
+    font-size: 30px;
+    color: white;
+    padding-left: 20px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    box-sizing: border-box;
+    transition: 0.4s;
+  }
+  .navlist li:hover a {
+    padding-left: 25px;
+  }
+
+  #check {
+    display: none;
+  }
+
+  label #btn,
+  label #cancel {
+    position: fixed;
+    cursor: pointer;
+    background: black;
+    border-radius: 1px;
+    z-index: 1000;
+  }
+  label #btn {
+    left: 20px;
+    top: 10px;
+    font-size: 20px;
+    color: white;
+    padding: 6px 12px;
+    transition: all 0.5s;
+  }
+  label #cancel {
+    z-index: 1111;
+    left: -200px;
+    top: 10px;
+    font-size: 15px;
+    color: #0a5275;
+    padding: 2px 4px;
+    transition: all 0.5s ease;
+  }
+  #check:checked ~ .sidebar {
+    left: 0;
+  }
+  #check:checked ~ label #btn {
+    left: 100px;
+    opacity: 0;
+    pointer-events: none;
+  }
+  #check:checked ~ label #cancel {
+    left: 170px;
+  }
+  /* #check:checked ~ .home {
+    margin-left: 100px;
+  }
+  #check:checked ~ .aboutus {
+    margin-left: 100px;
+  }
+  #check:checked ~ .services {
+    margin-left: 100px;
+  }
+  #check:checked ~ .contactus {
+    margin-left: 100px;
+  } */
+
+  /* First Div */
+
+  /* Second Div */
+
+  .home {
+    position: relative;
+  }
+  .slideshow-img {
+    position: absolute;
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    border: 2px solid navy;
+    /* z-index: -1; */
+    /* display: none; */
+    opacity: 0;
+    transition: opacity 0.75s ease-in-out;
+  }
+
+  /* .slideshow-img:first-child {
+    display: block;
+  } */
+  /* Third Div */
+
+  .aboutus {
+    display: flex;
+    width: 100%;
+    height: 300px;
+    flex-direction: row;
+    background: rgb(50, 50, 68);
+    color: white;
+  }
+
+  .aboutimg {
+    display: none;
+  }
+
+  blockquote {
+    position: absolute;
+    margin: 0;
+    padding: 0;
+    top: -300px;
+    font-family: sans-serif;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+
+  /* Fourth Div */
+
+  .services {
+    font-family: sans-serif;
+    top: 300px;
+    width: 100%;
+    height: 300px;
+    background-color: rgb(31, 31, 167);
+    color: white;
+  }
+
+  .services h2 {
+    padding-left: 10px;
+    margin: 0;
+  }
+
+  .servicelist {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    text-decoration: none;
+    margin: 0;
+  }
+
+  .servicelist li {
+    display: flex;
+    font-family: sans-serif;
+    position: relative;
+    text-decoration: none;
+    padding: 10px;
+    justify-content: center;
+    margin: 10px;
+    width: 80%;
+    background-color: rgb(50, 50, 68);
+  }
+
+  /* fifth Div */
+
+  .contactus {
+    display: flex;
+    position: relative;
+    flex-direction: row;
+    height: 400px;
+    font-family: sans-serif;
+    top: 300px;
+    width: 100%;
+    color: #000;
+  }
+  /* .contactus .A1 {
+    background: rgb(58, 58, 121);
+  } */
+
+  .address {
+    display: grid;
+    padding-left: 0;
+    margin-left: 20px;
+    padding-top: 20px;
+    grid-template-columns: 1fr;
+    color: #000;
+  }
+
+  .address h3 {
+    font-family: sans-serif;
+  }
+  .address ul {
+    padding: 0;
+  }
+  .address ul h4 {
+    font-family: sans-serif;
+    margin-bottom: 10px;
+    padding: 0;
+    margin: 0;
+    margin-bottom: 10px;
+    left: 0;
+  }
+  .address ul li {
+    display: flex;
+    position: relative;
+    margin-bottom: 10px;
+    font-family: sans-serif;
+    font-size: 13px;
+    text-decoration: none;
+  }
+
+  /* Sixth Div */
+
+  footer {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    top: 300;
+    align-items: center;
+    background-color: black;
+    color: rgb(163, 162, 162);
+    height: 30px;
+  }
+  footer p {
+    margin: 0;
+  }
+}
+
+/* form */
+
+/* Style inputs, select elements and textareas */
+input[type='text'],
+select,
+textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  resize: vertical;
+}
+
+/* Style the label to display next to the inputs */
+label {
+  padding: 12px 12px 12px 0;
+  display: inline-block;
+  color: #000;
+}
+
+/* Style the submit button */
+input {
+  background-color: #4caf50;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  float: right;
+}
+
+/* Style the container */
+.container {
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  padding: 20px;
+}
+
+/* Floating column for labels: 25% width */
+.col-25 {
+  float: left;
+  width: 25%;
+  margin-top: 6px;
+}
+
+/* Floating column for inputs: 75% width */
+.col-75 {
+  float: left;
+  width: 75%;
+  margin-top: 6px;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: '';
+  display: table;
+  clear: both;
+}
+
+/* Responsive layout - when the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+  .col-25,
+  .col-75,
+  input[type='submit'] {
+    width: 100%;
+    margin-top: 0;
+  }
+}
