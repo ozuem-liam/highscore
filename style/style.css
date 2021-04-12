@@ -70,7 +70,6 @@ section {
 .slideshow-img {
   position: absolute;
   object-fit: cover;
-  border: 2px solid navy;
   /* z-index: -1; */
   /* display: none; */
   opacity: 0;
@@ -87,17 +86,18 @@ section {
   position: relative;
   top: 600px;
   width: 100%;
+  height: 300px;
   color: #000;
 }
 
 blockquote {
+  display: flex;
+  flex-direction: column;
   font-family: sans-serif;
-  justify-content: center;
   text-align: center;
-  align-items: center;
-  padding-top: 70px;
+  padding: 2rem;
+  margin: 2rem;
 }
-
 /* Fourth Div */
 
 .services {
@@ -105,8 +105,7 @@ blockquote {
   width: 100%;
   position: relative;
   top: 600px;
-  /* height: 300px; */
-  height: 100vh;
+  height: 300px;
   padding-top: 5rem;
   color: #000;
 }
@@ -241,8 +240,8 @@ footer p {
 @media only screen and (max-width: 768px) {
   body {
     font-family: sans-serif;
-    background: rgb(50, 50, 68);
-    height: 100vh;
+    background: #fff;
+    height: 100%;
     padding: 0;
     margin: 0;
   }
@@ -268,7 +267,8 @@ footer p {
     left: -200px;
     width: 200px;
     margin: 0;
-    height: 100vh;
+    top: 0;
+    height: 50vh;
     background: linear-gradient(0deg, #1b1b1b, #222, #1b1b1b);
     transition: all 0.5s ease;
     z-index: 1000;
@@ -277,7 +277,8 @@ footer p {
   .sidebar header {
     display: block;
     font-size: 30px;
-    color: rgb(31, 31, 167);
+    color: #fff;
+    border-bottom: 2px solid #fff;
     text-align: center;
     line-height: 35px;
     background: linear-gradient(0deg, #1b1b1b, #222, #1b1b1b);
@@ -371,7 +372,6 @@ footer p {
     width: 100%;
     height: 300px;
     object-fit: cover;
-    border: 2px solid navy;
     /* z-index: -1; */
     /* display: none; */
     opacity: 0;
@@ -388,8 +388,7 @@ footer p {
     width: 100%;
     height: 300px;
     flex-direction: row;
-    background: rgb(50, 50, 68);
-    color: white;
+    color: #000;
   }
 
   .aboutimg {
@@ -411,35 +410,35 @@ footer p {
 
   .services {
     font-family: sans-serif;
-    top: 300px;
+    position: relative;
+    top: 400px;
     width: 100%;
-    height: 300px;
-    background-color: rgb(31, 31, 167);
-    color: white;
+    color: #000;
   }
 
-  .services h2 {
-    padding-left: 10px;
+  .services h2,
+  .services p {
     margin: 0;
+    padding: 0.5rem;
   }
 
   .servicelist {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
+    display: flex;
+    flex-direction: column;
     text-decoration: none;
     margin: 0;
+    padding: 0;
   }
 
   .servicelist li {
     display: flex;
     font-family: sans-serif;
-    position: relative;
     text-decoration: none;
-    padding: 10px;
-    justify-content: center;
-    margin: 10px;
-    width: 80%;
-    background-color: rgb(50, 50, 68);
+    width: 80vw;
+    border: #fff;
+    margin: 1rem;
+    box-shadow: 1px 1px 1px 1px #dcdcdc;
+    /* background-color: rgb(50, 50, 68); */
   }
 
   /* fifth Div */
@@ -447,10 +446,9 @@ footer p {
   .contactus {
     display: flex;
     position: relative;
-    flex-direction: row;
-    height: 400px;
+    flex-direction: column-reverse;
     font-family: sans-serif;
-    top: 300px;
+    top: 1050px;
     width: 100%;
     color: #000;
   }
@@ -459,12 +457,10 @@ footer p {
   } */
 
   .address {
-    display: grid;
-    padding-left: 0;
-    margin-left: 20px;
+    display: flex;
+    flex-direction: column;
     padding-top: 20px;
-    grid-template-columns: 1fr;
-    color: #000;
+    color: #fff;
   }
 
   .address h3 {
@@ -496,7 +492,7 @@ footer p {
     display: flex;
     justify-content: center;
     width: 100%;
-    top: 300;
+    top: 1050px;
     align-items: center;
     background-color: black;
     color: rgb(163, 162, 162);
@@ -504,6 +500,7 @@ footer p {
   }
   footer p {
     margin: 0;
+    padding: 1rem;
   }
 }
 
