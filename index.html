@@ -7,6 +7,12 @@
     <link rel="stylesheet" href="style/style.css">
     <script src="https://kit.fontawesome.com/935c6e3df3.js" crossorigin="anonymous"></script>
     <script src="./script/main.js" defer></script>
+        <!--JQuery-->  
+    <!-- <script type="text/javascript" src="jquery-3.3.1.min.js"></script>  
+    <!--Floating WhatsApp css-->  
+    <link rel="stylesheet" href="floating-wpp.min.css">  
+    <!--Floating WhatsApp javascript-->  
+    <script type="text/javascript" src="floating-wpp.min.js"></script> -->
 </head>
 <body>
     <input type="checkbox" id="check" class="check">
@@ -156,10 +162,9 @@
               </div>
         </div>
     </section>
-    <a href="https://api.whatsapp.com/send?
-         phone=+2348162373453
-         &text=Hola%information%."
-   		 class="float" target="_blank">
+    <!--Div where the WhatsApp will be rendered-->  
+<!-- <div id="WAButton"></div>   -->
+    <a href="https://api.whatsapp.com/send?phone=+2348162373453" class="float" target="_blank">
     <i class="fa fa-whatsapp my-float"></i>
     </a>
 
@@ -191,5 +196,23 @@
             slides[slide_index - 1].style.display = "block";  
         }  
     </script> 
+
+
+
+<!-- <script type="text/javascript">  
+    $(function () {
+            $('#WAButton').floatingWhatsApp({
+                phone: '+2348162373453', //WhatsApp Business phone number
+                headerTitle: 'Chat with us on WhatsApp!', //Popup Title
+                popupMessage: 'Hello, how can we help you?', //Popup Message
+                showPopup: true, //Enables popup display
+                buttonImage: '<img src="images/whatsapp.svg" alt="whatsapp"/>', //Button Image
+                //headerColor: 'crimson', //Custom header color
+                //backgroundColor: 'crimson', //Custom background button color
+                position: "right" //Position: left | right
+ 
+            });
+        });
+ </script>   -->
 </body>
 </html>
