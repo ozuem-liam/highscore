@@ -9,8 +9,8 @@
     <script src="./script/main.js" defer></script>
 </head>
 <body>
-    <input type="checkbox" id="check">
-        <label for="check">
+    <input type="checkbox" id="check" class="check">
+        <label for="check" class="check">
             <i class="fas fa-bars" id="btn"></i>
             <i class="fas fa-times" id="cancel"></i>
         </label>
@@ -81,6 +81,29 @@
         </ul>
     </section>
 
+    <section class="slidercontainer">  
+        <div class="showSlide fade">  
+            <img src="./images/slide2.jpeg" />  
+            <div class="content">Lorem ipsum dolor sit amet</div>  
+        </div>  
+        <div class="showSlide fade">  
+            <img src="./images/slide3.jpeg"/>  
+            <div class="content">Lorem ipsum dolor sit amet</div>  
+        </div>  
+  
+        <div class="showSlide fade">  
+            <img src="./images/slide4.jpeg"/>  
+            <div class="content">Lorem ipsum dolor sit amet</div>  
+        </div>  
+        <div class="showSlide fade">  
+            <img src="./images/slide5.jpeg"/>  
+            <div class="content">Lorem ipsum dolor sit amet</div>  
+        </div>  
+        <!-- Navigation arrows -->  
+        <a class="left" onclick="nextSlide(-1)">❮</a>  
+        <a class="right" onclick="nextSlide(1)">❯</a>  
+    </section> 
+
     <section id="contact" class="contactus">
         <div class="A1">
             <ul class="address">
@@ -101,7 +124,7 @@
         <div class="signup">
             <h4>Stay in touch</h4>
             <div class="container">
-                <form action="">
+                <form method="POST" action="">
                   <div class="row">
                     <div class="col-25">
                       <label for="fname">First Name</label>
@@ -120,22 +143,53 @@
                   </div>
                   <div class="row">
                     <div class="col-25">
-                      <label for="subject">Subject</label>
+                      <label for="subject">Message</label>
                     </div>
                     <div class="col-75">
                       <textarea id="subject" name="subject" placeholder="Write something.." style="height:200px"></textarea>
                     </div>
                   </div>
                   <div class="row">
-                    <input type="submit" value="Submit">
+                    <input class="submit" type="submit" value="Submit">
                   </div>
                 </form>
               </div>
         </div>
     </section>
+    <a href="https://api.whatsapp.com/send?
+         phone=+2348162373453
+         &text=Hola%information%."
+   		 class="float" target="_blank">
+    <i class="fa fa-whatsapp my-float"></i>
+    </a>
 
     <footer>
         <p>&copy; Copyrights 2021 HIGH SCORE EDUCATIONAL CONSULTANCY</p>
     </footer>
+    <script src="https://smtpjs.com/v3/smtp.js">
+    </script>
+    <script type="text/javascript">  
+        var slide_index = 1;  
+        displaySlides(slide_index);  
+  
+        function nextSlide(n) {  
+            displaySlides(slide_index += n);  
+        }  
+  
+        function currentSlide(n) {  
+            displaySlides(slide_index = n);  
+        }  
+  
+        function displaySlides(n) {  
+            var i;  
+            var slides = document.getElementsByClassName("showSlide");  
+            if (n > slides.length) { slide_index = 1 }  
+            if (n < 1) { slide_index = slides.length }  
+            for (i = 0; i < slides.length; i++) {  
+                slides[i].style.display = "none";  
+            }  
+            slides[slide_index - 1].style.display = "block";  
+        }  
+    </script> 
 </body>
 </html>
