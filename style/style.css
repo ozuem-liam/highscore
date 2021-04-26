@@ -21,7 +21,6 @@ label {
 
 /* First Div */
 .navbar {
-  height: 50px;
   display: grid;
   grid-template-columns: 1fr 1fr;
   padding: 10px;
@@ -37,7 +36,10 @@ label {
   padding: 10px;
   margin: 0;
 }
-
+.logo {
+  width: 80px;
+  height: 80px;
+}
 .navlist {
   display: flex;
   justify-content: space-around;
@@ -87,7 +89,8 @@ section {
   top: 600px;
   width: 100%;
   height: 300px;
-  color: #000;
+  color: #fff;
+  background-color: #222;
 }
 
 blockquote {
@@ -95,8 +98,8 @@ blockquote {
   flex-direction: column;
   font-family: sans-serif;
   text-align: center;
-  padding: 2rem;
-  margin: 2rem;
+  padding: 1rem;
+  margin: 1rem;
 }
 /* Fourth Div */
 
@@ -105,9 +108,11 @@ blockquote {
   width: 100%;
   position: relative;
   top: 600px;
-  height: 300px;
-  padding-top: 5rem;
-  color: #000;
+  height: 600px;
+  padding-top: 2rem;
+  color: #fff;
+  background-image: url('../background.jpg');
+  background-repeat: repeat;
 }
 
 .services h2,
@@ -135,6 +140,44 @@ blockquote {
   text-decoration: none;
   padding: 20px;
   border-radius: 2px;
+}
+
+.gallery {
+  display: flex;
+  flex-direction: column;
+  top: 700px;
+  justify-content: center;
+  align-items: center;
+}
+.gallery button,
+.gallery-pg button {
+  justify-self: center;
+  color: #fff;
+  background: rgb(241, 66, 66);
+  border: none;
+  height: 30px;
+}
+.gallery button a,
+.gallery-pg button a {
+  text-decoration: none;
+  color: #fff;
+}
+.gallery-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+.gallery-grid img {
+  width: 400px;
+  height: 400px;
+  margin: 0.5rem;
+  justify-self: center;
+}
+.gallery-pg {
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 /* fifth Div */
@@ -445,9 +488,10 @@ label {
   .aboutus {
     display: flex;
     width: 100%;
-    height: 300px;
+    height: 500px;
+    top: 300px;
     flex-direction: row;
-    color: #000;
+    color: #fff;
   }
 
   .aboutimg {
@@ -455,10 +499,9 @@ label {
   }
 
   blockquote {
-    position: absolute;
+    position: relative;
     margin: 0;
     padding: 0;
-    top: -300px;
     font-family: sans-serif;
     justify-content: center;
     align-items: center;
@@ -470,9 +513,10 @@ label {
   .services {
     font-family: sans-serif;
     position: relative;
-    top: 400px;
+    top: 300px;
     width: 100%;
-    color: #000;
+    height: 900px;
+    color: #fff;
   }
 
   .services h2,
@@ -500,6 +544,45 @@ label {
     /* background-color: rgb(50, 50, 68); */
   }
 
+  .gallery {
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    top: 300px;
+    justify-content: center;
+    align-items: center;
+  }
+  .gallery-pg {
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .gallery button,
+  .gallery-pg button {
+    justify-self: center;
+    color: #fff;
+    background: rgb(241, 66, 66);
+    border: none;
+    height: 50px;
+    width: 100%;
+  }
+  .gallery button a,
+  .gallery-pg button a {
+    text-decoration: none;
+    color: #fff;
+  }
+  .gallery-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+  .gallery-grid img {
+    width: 300px;
+    height: 300px;
+    margin: 0.5rem;
+    justify-self: center;
+  }
   /* fifth Div */
 
   .contactus {
@@ -507,7 +590,7 @@ label {
     position: relative;
     flex-direction: column-reverse;
     font-family: sans-serif;
-    top: 800px;
+    top: 300px;
     width: 100%;
     color: #000;
   }
@@ -551,15 +634,14 @@ label {
     display: flex;
     justify-content: center;
     width: 100%;
-    top: 800px;
+    top: 300px;
     align-items: center;
     background-color: black;
     color: rgb(163, 162, 162);
-    height: 30px;
   }
   footer p {
     margin: 0;
-    padding: 1rem;
+    padding: 0;
   }
 }
 
@@ -594,7 +676,7 @@ label {
   border: none;
   border-radius: 4px;
   cursor: pointer;
-  float: right;
+  float: left;
 }
 
 /* Style the container */
